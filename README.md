@@ -1,12 +1,15 @@
 # Jquery 开关效果插件
 JQuery Switch plug-in
 
-###默认使用
+How to use
+----------
+
+默认使用
 ```bash
 $.switch()
 ```
 
-###调整大小
+调整大小
 ```bash
 $.switch({
   target:'.biggerSwitch',
@@ -20,7 +23,7 @@ $.switch({
 })
 ```
 
-###开关事件的回调
+开关事件的回调
 ```bash
 $.switch({
   target:'.callbackSwitch',
@@ -35,7 +38,7 @@ $.switch({
 })
 ```
 
-###动画速度调整
+动画速度调整
 ```bash
 $.switch({
   target:'.speedSwitch',
