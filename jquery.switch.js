@@ -46,18 +46,32 @@ $.extend({
             }
         })
 
+        var swAnimate = function (that) {
+            var son = that.find('div')
+            var className = that.attr('class')
+            var newClassName
+            if (className.indexOf('switch-on') > 0 ) {
+                son.animate({left:'0px'},options.speed)
+                newClassName = className.replace(/switch-on/,'switch-off')
+            }else{
+                son.animate({left:options.height/2+'px'},options.speed)
+                if (className.indexOf('switch-off') < 0) {
+                    newClassName = className+" switch-on";
+                }
+                newClassName =  className.replace(/switch-off/,'switch-on')
+            }
+            that.attr('class',newClassName)
+        }
+
         btns.click(function(res){
             var that = $(this)
-            var parentObj = that.parent()
-            var className = parentObj.attr('class')
-            var newClassName = myAnimate(that,className)
-            parentObj.attr('class',newClassName)
+            var parentObj  = that.parent()
+            swAnimate(parentObj)
             var callback =  options.callback || parentObj.attr('callback')
-
             if (callback != undefined ) {
-                if(callback(that) === false){
-                    newClassName = myAnimate(that,newClassName)
-                    parentObj.attr('class',newClassName)
+                parentObj.switchAnimate = swAnimate;
+                if(callback(parentObj) === false){
+                    swAnimate(parentObj)
                 }
             }
         });
