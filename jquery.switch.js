@@ -9,8 +9,8 @@ $.extend({
     switch:function(opt){
         var options = $.extend({
             target  : '.appleswitch',
-            height 	: 100,
-            speed	: 'fast',
+            height  : 100,
+            speed   : 'fast',
             callback : false
         },opt)
 
@@ -114,19 +114,5 @@ $.extend({
                 $.switchStyle = style;
             }
         }
-
-        function myAnimate(that,className){
-            if (className.indexOf('switch-on') > 0 ) {
-                that.animate({left:'0px'},options.speed)
-                return className.replace(/switch-on/,'switch-off')
-            }else{
-                that.animate({left:options.height/2+'px'},options.speed)
-                if (className.indexOf('switch-off') < 0) {
-                    return className+" switch-on";
-                }
-                return className.replace(/switch-off/,'switch-on')
-            }
-        }
-
     }
 });
