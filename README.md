@@ -1,6 +1,10 @@
 # Jquery 开关效果插件
+
 JQuery Switch plug-in
+----------
+
 ![](https://github.com/yetianyue/Jquery-switch/blob/master/demo.gif)  
+
 How to use
 ----------
 
