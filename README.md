@@ -38,7 +38,9 @@ $.switch({
     }else{
       //关闭
     }
-  }
+    //开关控制
+    //that.switchAnimate(that)
+  }
 })
 ```
 
