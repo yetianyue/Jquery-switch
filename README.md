@@ -3,7 +3,7 @@
 JQuery Switch plug-in
 ----------
 
-![](https://github.com/yetianyue/Jquery-switch/blob/master/demo.gif)  
+![](https://github.com/yetianyue/Jquery-switch/blob/master/new.gif)  
 
 How to use
 ----------
